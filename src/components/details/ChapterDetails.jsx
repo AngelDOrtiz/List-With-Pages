@@ -5,21 +5,30 @@ import { useSingleChapter } from '../../state/chapter';
 const ChapterDetails = () => {
   const { id } = useParams();
   const chapter = useSingleChapter(id);
-  if(!chapter) return <h1>Sailing...</h1>;
+  if(!chapter) return <h1>Loading...</h1>;
 
   return (
     <section>
-      <h2>Chapter Details</h2>
+      <h2>Villager Details</h2>
       <dl>
-        <dt>Title</dt>
-        <dd>{chapter.title}</dd>
+        <dt>Name</dt>
+        <dd>{chapter.name}</dd>
 
-        <dt>Chapter</dt>
-        <dd>{chapter.chapter}</dd>
+        <dt>Species</dt>
+        <dd>{chapter.species}</dd>
+
+        <dt>Quote</dt>
+        <dd>{chapter.quote}</dd>
+
+        <dt>Phrase</dt>
+        <dd>{chapter.phrase}</dd>
+
+        <dt>Skill</dt>
+        <dd>{chapter.skill}</dd>
 
         <dt>Image</dt>
         <dd>
-          <img src={chapter.cover_image} alt={chapter.title} />
+          <img src={chapter.image} alt={chapter.name} />
         </dd>
       </dl>
     </section>

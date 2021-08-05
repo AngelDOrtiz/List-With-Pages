@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Chapter = ({ title, chapter, cover_image }) => (
+const Chapter = ({ name, quote, image }) => (
   <figure>
-    <img src={cover_image} alt={title} />
+    <img src={image} alt={name} />
     <figcaption>
-      <h2>{title}</h2>
-      <p>{chapter}</p>
+      <h2>{name}</h2>
+      <p>{quote}</p>
     </figcaption>
   </figure>
 );
 
 Chapter.propTypes = {
-  title: PropTypes.string.isRequired,
-  chapter: PropTypes.string.isRequired,
-  cover_image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default Chapter;

@@ -9,8 +9,8 @@ const ChapterList = () => {
   if(loading) return <h1>Sailing...</h1>;
 
   const chapterElements = chapters.map((chapter) => (
-    <li key={chapter.id}>
-      <Link to={`/${chapter.id}`}>
+    <li key={chapter._id}>
+      <Link to={`/${chapter._id}`}>
         <Chapter {...chapter} />
       </Link>
     </li>

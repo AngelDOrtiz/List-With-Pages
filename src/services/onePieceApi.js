@@ -1,7 +1,7 @@
   
 export const fetchChapters = async (page) => {
   const res = await fetch(
-    'https://onepiececover.com/api/chapters'
+    'https://ac-vill.herokuapp.com/villagers'
   );
   const chapters = await res.json();
   
@@ -9,7 +9,7 @@ export const fetchChapters = async (page) => {
 };
   
 export const fetchSingleChapter = async (id) => {
-  const res = await fetch(`https://onepiececover.com/api/chapters/${id}`);
+  const res = await fetch(`https://ac-vill.herokuapp.com/villagers/${id}`);
   
   return res.json();
 };

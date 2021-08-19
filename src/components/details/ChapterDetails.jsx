@@ -8,7 +8,7 @@ const ChapterDetails = () => {
   if(!chapter) return <h1>Loading...</h1>;
 
   return (
-    <section>
+    <section data-testid="1">
       <h2>Villager Details</h2>
       <dl>
         <dt>Name</dt>
